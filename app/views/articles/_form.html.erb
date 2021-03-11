@@ -1,0 +1,40 @@
+<!--articles-->
+
+<%= form_with model: @article do |form|%>
+<!--
+<form action="/articles" method="post" accept-charset="utf-8">
+</form>
+included a token
+-->
+    <div>
+        <!--label and input-->
+        <%= form.label "title" %>
+        <%= form.text_field "title" %> <!-- name="article[title]" id="article_title" -->
+        <% @article.errors.full_messages_for(:title).each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+    <div>
+        <%= form.label "body" %>
+        <%= form.text_area "body" %>
+        <% if false %>
+            <% @article.errors.full_messages_for(:title).each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        <% end %>
+    </div>
+    <div>
+        <%= form.label :status %> <br />
+        <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    </div>
+    <div>
+        <%= form.submit %>
+        <!--input type="submit" name="commit" value="create article" data-disable-with="create article"-->
+    </div>
+
+    <%=
+        # render "form", article: @article
+    %>
+    
+
+<% end %>
