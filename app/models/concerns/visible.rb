@@ -14,7 +14,8 @@ module Visible
             # Article.where(status: 'public').count
             # Comment.where(statis: 'public').count
 
-            where(status: 'public').count
+            Article.where(status: 'public').count
+            Comment.where(status: 'public').count
 
 
         end

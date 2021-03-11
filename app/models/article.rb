@@ -28,6 +28,7 @@
 
 class Article < ApplicationRecord
     include Visible
+    # self.table_name="my_products"
 
     has_many :comments, dependent: :destroy
     # validations

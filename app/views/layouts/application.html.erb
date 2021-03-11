@@ -6,11 +6,26 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%# <%= stylesheet_link_tag 'main' %> <!--app/assets/stylesheets/main.css-->
+    <%# <%= javascript_include_tag %> %>
+    <%# <script src='/assets/main.js'></script> %>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%# <%= javascript_pack_tag 'main'%> <!--app/javascript/packs/main.js-->
+    <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> %>
   </head>
 
   <body>
+    <%# <%= image_tag "img_path"%> <!--assets/imags/xxx.png--> %>
+    <%# <%= yield :head %> %>
+    <%# <% content_for :head %> %>
+      <%# yield header %>
+    <%# <% end %> %>
+    <!--
+
+    -->
+    
+
     <%= yield %>
   </body>
 </html>

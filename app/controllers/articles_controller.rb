@@ -16,10 +16,32 @@ require "json"
 class ArticlesController < ApplicationController
   # GET / => articles#index 
   # GET /articles => articles#index
+  # layout "xxx" # layout/xxx.html.erb
+  # layout false, template inheritance
+  # redirect_to url, redirect_back
+
+  # head xxx: xxx
   def index
+    puts "==================", request.host
     puts "resource: index"
     @articles = Article.all
     # view: index.html.erb
+    
+    @books = []
+    # { locale: I18n.locale }
+    # session.delete()
+
+    # Rails.application.config.session_store :cookie_store, key:, domain:
+    # session[:xxx]
+    # cookies[a]=b, cookies.delete(xxxx)
+    # respond_to do |format|
+    #   format.html, format.json{render json: @users}
+    # end
+
+    # send_file()
+    cookies[:k1]="v1"
+    # response.header["aa"] = "bb"
+
   end
 
   # GET /articles/:id => articles#show

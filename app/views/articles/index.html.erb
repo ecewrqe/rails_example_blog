@@ -14,3 +14,45 @@ totally has <%= Article.comment_count %> comment
 </ul>
 
 <%= link_to "New Article", new_article_path %>
+<%= myhelper %>
+<%= csrf_meta_tags %>
+<%# <%= button_to "Sign in", path%> %>
+<%# <% @books.each do |book| %> %>
+  <%# <%= book.title %> %>
+<!--
+  form.label, form.text_field, form.check_box
+  form.radio, form.hidden_field, form.password_field, form.xxxx
+  form_with url: "", method: :get do |form|
+  form_with model: @article do 
+  form_with model: [namespaces, @article] do 
+  form.select :xx, []
+  form.select :xx, [[], [], []]
+  form.field_field :picture
+-->
+
+
+<%# <%= form.check_box :pet_dog %> %>
+<%# <%= form.label :pet_dog, "xxx" %> %>
+
+  
+<%# <% end %> %>
+<%# <%= link_to "Show", book%> %>
+  <!--
+  link_to: inner, id, method, data
+  render "products/show"
+  render inline: "<%%>", render plain: "ok"
+  render html
+  render json: @product, render xml: @product
+  render js: "", render body: "raw"
+  render "", content_type
+  render layout: xxx layout
+  render variants: [xx,xx]
+  -->
+
+  <%# <%= javascript_include_tag "main" %> %>
+  <!--
+  <script src='/assets/main.js'></script>
+  
+  -->
+<%# <%= javascript_include_tag "main" %> %>
+<%# <script src='/assets/main.js'></script> %>
